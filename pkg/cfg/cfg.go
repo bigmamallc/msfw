@@ -3,7 +3,7 @@ package cfg
 import "github.com/bigmamallc/env"
 
 func EnvCfg(cfg interface{}, prefix string) error {
-	return env.Set(cfg)
+	return env.SetWithEnvPrefix(cfg, prefix)
 }
 
 func MustEnvCfg(cfg interface{}, prefix string) {
